@@ -1,7 +1,7 @@
 # A detailed guide to installing `neo4j` server community edition on windows.
 This is a guide to installing `neo4j` server on windows 10, how to launch and connect to your own `neo4j` server, and how to install and use plugins with them. Throughout this guide, we will be downloading many programs and tools too:  
-    - [Node.js](https://nodejs.org/en/) 
-        - [Yarn](https://yarnpkg.com/getting-started/install) 
+    - [Node.js](https://nodejs.org/en/)  
+        - [Yarn](https://yarnpkg.com/getting-started/install)  
     - [Git](https://git-scm.com/download/win) for windows  
     - [Java SE developer kit](https://www.oracle.com/java/technologies/downloads/#jdk17-windows) (version 17, specifically)  
     - NeoDash (complicated, will be instructed below)
