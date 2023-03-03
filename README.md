@@ -30,7 +30,7 @@ Yarn itself is not a program. Yarn is a programming package manager, that is alr
 (Show window)  
 Then proceed to type/copy the code line below: 
 ``` 
-    corepack enable
+corepack enable
 ```
 This will enable Yarn for us to install `NeoDash`. 
 
@@ -60,12 +60,12 @@ Before we continue to launch `neo4j`, we will also be downloading a dashboard bu
 (show pic)  
 3. Type/copy the code below:
 ```
-    git clone https://github.com/neo4j-labs/neodash 
+git clone https://github.com/neo4j-labs/neodash 
 ```  
 (show pic)  
 4. Once the progress is done, type/copy the following code:  
 ```
-    yarn install
+yarn install
 ```
 (show pic)  
 Now `NeoDash` is fully installed and ready to be used.
