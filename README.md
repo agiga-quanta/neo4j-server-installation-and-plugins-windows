@@ -45,10 +45,8 @@ After launching the installer, follow the instruction.
 Go to the following link to download the appropriate [neo4j server community edition](https://neo4j.com/download-center/#community)  
 (Show pic of the choice here - Windows Executable)  
 
-After downloading the file, locate the location you want to deploy the server. In this case, we are choosing the D: drive. We will be calling this the `NEO4J_HOME` folder.   
-(Show pic of zip file in D:)
-
-Once selected, launch a window of `Command Prompt`, and navigate to your `NEO4J_HOME`. You will be using the console to activate, install additional plugins, and to stop the server once you are done.  
+After downloading the file, locate the location you want to deploy the server, and extract the zip file there. In this case, we are choosing the D: drive. We will be calling this the `NEO4J_HOME` folder. The result will look like this:  
+(Show pic of zip file in D:)  
 
 ### 2.2 Installing APOC core 
 Since our work will also be using APOC for functions and queries that would be more convenient, we will be installing APOC core. This file is already available in the `labs` folder in `NEO4J_HOME`.  
