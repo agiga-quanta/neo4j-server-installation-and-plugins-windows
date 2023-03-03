@@ -77,7 +77,10 @@ At this step, you should have everything ready to launch and use.
 
 ### 4.1: Launching neo4j:
 To launch `neo4j`, navigate to the `bin` folder inside the `NEO4J_HOME` folder in `Command Prompt`, then copy this code below:  
-``` neo4j console```  
+``` 
+neo4j console
+```  
+
 `Neo4j` can then be accessed in a browser at the following address: `localhost:7474`.  
 (show pic)  
 
@@ -94,7 +97,10 @@ Similar to launching `neo4j`, you need to use `Command Prompt` to navigate to th
 (Show pic)
 
 Once there, copy the following code:  
-``` yarn run dev```  
+``` 
+yarn run dev
+```  
+
 This will run `NeoDash`, and you can access it by going to `localhost:3000` on your browser.   
 (Show pic)
 
