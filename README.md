@@ -57,6 +57,50 @@ Since our work will also be using APOC for functions and queries that would be m
 Simply copy it over to `plugins` folder, and it will be available the next time you launch `neo4j`.  
 <img width="640" alt="image" src="https://github.com/agiga-quanta/neo4j-server-installation-and-plugins-windows/blob/main/images/Apoc%20now%20available.png?raw=true">
 
+### 2.3 Configurating `neo4j` and `windows` for remote connection
+#### 2.3.1 Configuring `neo4j` for remote connect
+In order to connect to `neo4j` from outside, we must configure the program to listen to inbound connection request. First, you must access the `conf` folder in `NEO4J_HOME`:    
+<img width="640" alt="image" src="https://github.com/agiga-quanta/neo4j-server-installation-and-plugins-windows/blob/main/images/Access%20conf.png?raw=true"> 
+
+Then, open the neo4j conf with any program that can be used to edit it. In this example, we will be using `Visual Studio Code`:  
+<img width="640" alt="image" src="https://github.com/agiga-quanta/neo4j-server-installation-and-plugins-windows/blob/main/images/Open%20neo4j%20conf.png?raw=true"> 
+
+Now locate these lines and delete the `#` before the line. Becareful not to accidentally pull the code into a different line.   
+<img width="640" alt="image" src="https://github.com/agiga-quanta/neo4j-server-installation-and-plugins-windows/blob/main/images/Uncomment%20these%20for%20connection.png?raw=true"> 
+
+#### 2.3.2 Configuring `Windows Defender Firewall`  
+As of now, you have enable `neo4j` to respond to call for it from outside, but you still need to configure window's own firewall: `Windows Defender Firewall`.  
+1. Open `Windows Defender Firewall`  
+<img width="640" alt="image" src="https://github.com/agiga-quanta/neo4j-server-installation-and-plugins-windows/blob/main/images/Opening%20windows%20defender%20firewall.png?raw=true"> 
+
+2. Access `Advance settings`  
+<img width="640" alt="image" src="https://github.com/agiga-quanta/neo4j-server-installation-and-plugins-windows/blob/main/images/Advance%20settings.png?raw=true"> 
+
+3. Go to `Inbound Rules`, then select `New rules` on the right side   
+<img width="640" alt="image" src="https://github.com/agiga-quanta/neo4j-server-installation-and-plugins-windows/blob/main/images/Inbound%20rules,%20new%20rules.png?raw=true"> 
+
+4. Here, you have to choose connecting through port    
+<img width="640" alt="image" src="https://github.com/agiga-quanta/neo4j-server-installation-and-plugins-windows/blob/main/images/Port%20.png?raw=true"> 
+
+5. Choose connection type `TCP` and type in port number `7474`. This is the default http port for neo4j. It is also the port noted in the section above when you delete the `#` above.  
+<img width="640" alt="image" src="https://github.com/agiga-quanta/neo4j-server-installation-and-plugins-windows/blob/main/images/tcp%20port%207474.png?raw=true">
+
+6. Now choose `Allow the connection`
+<img width="640" alt="image" src="https://github.com/agiga-quanta/neo4j-server-installation-and-plugins-windows/blob/main/images/Allow%20connection.png?raw=true">
+
+7. Select all options here
+<img width="640" alt="image" src="https://github.com/agiga-quanta/neo4j-server-installation-and-plugins-windows/blob/main/images/Select%20all%20option.png?raw=true">
+
+8. Lastly, name the port opening, so we can find it again in the future. For `neo4j`, we name it `neo4j http`. 
+<img width="640" alt="image" src="https://github.com/agiga-quanta/neo4j-server-installation-and-plugins-windows/blob/main/images/Name%20port%20opening.png?raw=true">
+
+9. Now we have to repeat step 3-8 again, but for another rule to enable `neo4j bolt`, and `NeoDash` to connect. Below are the two steps 5 and 8, where there is a difference in the process. In each respective rules, their ports are:
+    - `neo4j bolt`: `7687`  
+    - `NeoDash`: `3000`  
+
+<img width="640" alt="image" src="https://github.com/agiga-quanta/neo4j-server-installation-and-plugins-windows/blob/main/images/Neodash%20port.png?raw=true">  
+<img width="640" alt="image" src="https://github.com/agiga-quanta/neo4j-server-installation-and-plugins-windows/blob/main/images/name%20neodash%20port.png?raw=true">  
+
 ## Step 3: Installing `NeoDash`
 Before we continue to launch `neo4j`, we will also be downloading a dashboard builder that's built for `neo4j`. `NeoDash`, however, is a bit more complicated to install, as it is not just a folder, but a GitHub repository. To install, follow the steps below:  
 1. Launch `Git CMD`  
@@ -93,6 +137,13 @@ Now `NeoDash` is fully installed and ready to be used.
 ## Step 4: Launching and navigating
 At this step, you should have everything ready to launch and use.
 
+For any one to access neo4j from outside but on the same network, you will need to access through the computer's `IP address`. In order to do so, open a `Command Prompt` window, and copy the following code:  
+``` 
+ipconfig
+```
+Now, locate this line, and the entire corresponding number on the right hand side is you `IP address`
+(ipconfig)
+
 ### 4.1: Launching neo4j:
 To launch `neo4j`, navigate to the `bin` folder inside the `NEO4J_HOME` folder in `Command Prompt`, then copy this code below:  
 ``` 
@@ -100,7 +151,7 @@ neo4j console
 ```  
 <img width="640" alt="image" src="https://github.com/agiga-quanta/neo4j-server-installation-and-plugins-windows/blob/main/images/neo4j%20server%20launched.png?raw=true"> 
 
-`Neo4j` can then be accessed in a browser at the following address: `localhost:7474`.  
+`Neo4j` can then be accessed in a browser at the following address: `IP address:7474`.  
 <img width="640" alt="image" src="https://github.com/agiga-quanta/neo4j-server-installation-and-plugins-windows/blob/main/images/neo4j%20browser%20launch.png?raw=true">  
 
 You can then choose how to access `neo4j` browser, here we chose the method `username/password`. For the first time, we will be using the default username: `neo4j` and password: `neo4j` to access the first time.  
@@ -125,7 +176,7 @@ yarn run dev
 <img width="640" alt="image" src="https://github.com/agiga-quanta/neo4j-server-installation-and-plugins-windows/blob/main/images/neodash%20is%20now%20online!.png?raw=true">
 
 
-This will run `NeoDash`, and you can access it by going to `localhost:3000` on your browser. Once there, you will be shown this screen:  
+This will run `NeoDash`, and you can access it by going to `IP address:3000` on your browser. Once there, you will be shown this screen:  
 <img width="640" alt="image" src="https://github.com/agiga-quanta/neo4j-server-installation-and-plugins-windows/blob/main/images/Neodash%20now%20available.png?raw=true">
 
 Simply click `NEW DASHBOARD`, and you will be taken to this screen: 
