@@ -85,6 +85,10 @@ neo4j console
 You can then choose how to access `neo4j` browser, here we chose the method `username/password`.  
 (show pic)  
 
+After using the default username: `neo4j` and password: `neo4j` to access the first time  
+
+You will be prompted to change your password. This username and password is what you will use everytime you access neo4j again.
+
 ### 4.2: Importing data files:
 Usually, you need to use data outside of what `neo4j` can offer. In order to do so, you will need to navigate to your `NEO4J_HOME` folder. Once there, navigate to `import` folder, and put the data file there.   
 (Show pic)  
@@ -113,7 +117,8 @@ When shown this screen:
 You need to change the following:
 - Connection: Bolt
 - Port: 7867
-
+- Username: neo4j
+- Password: the password you created above
 Then, click `Connect`, and you will be connected and your dashboard is ready to use.
 
 ### 4.4 Load a pre-designed dashboard:
