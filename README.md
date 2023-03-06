@@ -6,6 +6,8 @@ This is a guide to installing `Neo4j` server on windows 10, how to launch and co
     - [Java SE developer kit 17](https://www.oracle.com/java/technologies/downloads/#jdk17-windows)   
     - `NeoDash` (complicated, will be instructed below)
 
+This guide is also made into a video instruction playlist available on YouTube [here](https://www.youtube.com/playlist?list=PL3KBtMOTv6gOKb1bEdb777gE06iMaWf4g)
+
 ## Step 1: Installing prerequisites for `Neo4j` server and NeoDash:
 Our order of installation will be:  
 1. Java developer kit 17 (JDK)   
