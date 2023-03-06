@@ -32,13 +32,13 @@ Yarn itself is not a program. Yarn is a programming package manager, that is alr
 ``` 
 corepack enable
 ```
-This will enable Yarn for us to install `NeoDash`. 
+This will enable Yarn for us to install `NeoDash`.   
 <img width="640" alt="image" src="https://github.com/agiga-quanta/neo4j-server-installation-and-plugins-windows/blob/main/images/Enabling%20corepack%20and%20checking%20yarn.png?raw=true"> 
 
 ### 1.4 Installing `Git`
 For windows, you will have to navigate to `Git` download page linked above. Once there, from the section `Standalone Installer`, select the appropriate version for your computer. In this case, we will be going with the `64-bit Git for Windows Setup`.  
 <img width="640" alt="image" src="https://github.com/agiga-quanta/neo4j-server-installation-and-plugins-windows/blob/main/images/Git%20web.png?raw=true">  
-After launching the installer, follow the instruction. 
+After launching the installer, follow the instruction.   
 <img width="640" alt="image" src="https://github.com/agiga-quanta/neo4j-server-installation-and-plugins-windows/blob/main/images/Git%20installer.png?raw=true">  
 
 ## Step 2: Installing `Neo4j` server community edition and APOC core 
