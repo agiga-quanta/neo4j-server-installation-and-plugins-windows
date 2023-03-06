@@ -141,8 +141,9 @@ For any one to access neo4j from outside but on the same network, you will need 
 ``` 
 ipconfig
 ```
-Now, locate this line, and the entire corresponding number on the right hand side is you `IP address`
-(ipconfig)
+Now, locate this line, and the entire corresponding number on the right hand side is you `IP address`  
+<img width="640" alt="image" src="https://github.com/agiga-quanta/neo4j-server-installation-and-plugins-windows/blob/main/images/ipconfig.png?raw=true"> 
+
 
 ### 4.1: Launching neo4j:
 To launch `Neo4j`, navigate to the `bin` folder inside the `NEO4J_HOME` folder in `Command Prompt`, then copy this code below:  
@@ -162,7 +163,8 @@ You will be prompted to change your password. This username and password is what
 
 ### 4.2: Importing data files:
 Usually, you need to use data outside of what `Neo4j` can offer. In order to do so, you will need to navigate to your `NEO4J_HOME` folder. Once there, navigate to `import` folder, and put the data file there.   
-<img width="640" alt="image" src="https://github.com/agiga-quanta/neo4j-server-installation-and-plugins-windows/blob/main/images/Inserting%20files%20into%20import.png?raw=true"> 
+<img width="640" alt="image" src="https://github.com/agiga-quanta/neo4j-server-installation-and-plugins-windows/blob/main/images/Inserting%20files%20into%20import.png?raw=true">  
+
 The data is now ready to be used.
 
 ### 4.3: Launching NeoDash:
